@@ -6,7 +6,7 @@
 
 <script>
 import store from '../store'
-import UserInfo from '@/components/User/Info.vue'
+import UserInfo from '@/components/UserInfo.vue'
 
 export default {
   name: 'News',
