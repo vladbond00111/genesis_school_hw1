@@ -6,7 +6,7 @@
 
 <script>
 import store from '../store'
-import UserInfo from '@/components/UserInfo.vue'
+import UserInfo from '@/components/User/Info.vue'
 
 export default {
   name: 'News',
@@ -21,15 +21,15 @@ export default {
   },
   computed: {
     userInfo() {
-      return store.state.news.userInfo
+      return store.state.users.userInfo
     },
     userFeed() {
       return store.state.news.userFeed
     }
   },
   mounted() {
-    store.dispatch('news/getUserInfo', this.$route.params.id)
-    // store.dispatch('news/getUserFeed', this.$route.params.id)
+    store.dispatch('users/getUserInfo', this.$route.params.id)
+    store.dispatch('users/getUserFeed', this.$route.params.id)
   },
   methods: {
     getData () {

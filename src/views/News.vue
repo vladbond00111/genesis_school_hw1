@@ -16,7 +16,7 @@
 <script>
 // @ is an alias to /src
 import store from '../store'
-import NewsCard from '@/components/NewsCard.vue'
+import NewsCard from '@/components/News/Card.vue'
 // import axios from "axios";
 
 export default {
