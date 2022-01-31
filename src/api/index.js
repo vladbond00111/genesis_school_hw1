@@ -27,7 +27,7 @@ export const getUserInfo = new Promise((resolve) => {
             resolve(response.data) ;
         })
         .catch(function (error) {
-            console.error(error);
+            // console.error(error);
         });
 });
 
@@ -38,7 +38,7 @@ export const getUserFeed = new Promise((resolve) => {
             resolve(response.data) ;
         })
         .catch(function (error) {
-            console.error(error);
+            // console.error(error);
         });
 });
 
