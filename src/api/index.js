@@ -28,7 +28,6 @@ export const getUserInfo = new Promise((resolve) => {
         })
         .catch(function (error) {
             console.error(error);
-            resolve(error);
         });
 });
 
@@ -40,7 +39,6 @@ export const getUserFeed = new Promise((resolve) => {
         })
         .catch(function (error) {
             console.error(error);
-            resolve(error);
         });
 });
 
