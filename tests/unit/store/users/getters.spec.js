@@ -6,9 +6,9 @@ const state = {
 }
 
 test('getter userInfo возвращает данные', () => {
-  expect(users.getters.userInfo(state)).toBe(state.userInfo)
+  expect(users.getters.userInfo(state)).toEqual(state.userInfo)
 })
 
 test('getter userFeed возвращает данные', () => {
-  expect(users.getters.userFeed(state)).toBe(state.userFeed)
+  expect(users.getters.userFeed(state)).toEqual(state.userFeed)
 })

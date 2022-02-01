@@ -26,9 +26,9 @@ export const getUserInfo = new Promise((resolve) => {
         .then(response => {
             resolve(response.data) ;
         })
-        .catch(function (error) {
-            // console.error(error);
-        });
+        // .catch(function (error) {
+        //     console.error(error);
+        // });
 });
 
 export const getUserFeed = new Promise((resolve) => {
@@ -37,9 +37,9 @@ export const getUserFeed = new Promise((resolve) => {
         .then(response => {
             resolve(response.data) ;
         })
-        .catch(function (error) {
-            // console.error(error);
-        });
+        // .catch(function (error) {
+        //     console.error(error);
+        // });
 });
 
 

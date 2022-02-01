@@ -5,5 +5,5 @@ const state = {
 }
 
 test('getter trendingFeed возвращает данные', () => {
-  expect(news.getters.trendingFeed(state)).toBe(state.trendingFeed)
+  expect(news.getters.trendingFeed(state)).toEqual(state.trendingFeed)
 })
