@@ -4,6 +4,9 @@ const state = {
   trendingFeed: { id: 1, title: "Post" }
 }
 
-test('getter trendingFeed возвращает данные', () => {
-  expect(news.getters.trendingFeed(state)).toEqual(state.trendingFeed)
+describe('news/getter ok', () => {
+  test('getter trendingFeed ok', () => {
+    expect(news.getters.trendingFeed(state)).toEqual(state.trendingFeed)
+  })
 })
+

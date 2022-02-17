@@ -46,13 +46,13 @@ describe('components/UserInfo ok', () => {
       userInfo: userItem,
     }
   })
-  it('UserInfo has nickname', () => {
+  test('UserInfo has nickname', () => {
     expect(wrapper.find('.user-nickname').text()).toEqual(userItem.user.nickname)
   })
-  it('UserInfo has link', () => {
+  test('UserInfo has link', () => {
     expect(wrapper.find('.user-link').text()).toEqual(userItem.user.bioLink.link)
   })
-  it('UserInfo has text', () => {
+  test('UserInfo has text', () => {
     expect(wrapper.find('.user-signature').text()).toEqual(userItem.user.signature)
   })
 })

@@ -68,19 +68,19 @@ describe('components/NewsCard ok', () => {
     },
     // stubs: ['router-link']
   })
-  it('NewsCard has text', () => {
+  test('NewsCard has text', () => {
     expect(wrapper.find('.card-text').text()).toEqual(feedItem.text)
   })
-  it('NewsCard has author-name', () => {
+  test('NewsCard has author-name', () => {
     expect(wrapper.find('.author-name').text()).toEqual(feedItem.authorMeta.nickName)
   })
-  it('NewsCard has likes-count', () => {
+  test('NewsCard has likes-count', () => {
     expect(wrapper.find('.likes-count').text()).toEqual(feedItem.diggCount)
   })
-  it('NewsCard has comments-count', () => {
+  test('NewsCard has comments-count', () => {
     expect(wrapper.find('.comments-count').text()).toEqual(feedItem.commentCount)
   })
-  // it('NewsCard router-link works ok', () => {
+  // test('NewsCard router-link works ok', () => {
   //   // expect((wrapper.find('router-link').attributes() as any).to).toBe(temp.url)
   //   console.log(wrapper.find('.user-link'))
   //   console.log(wrapper.find('.user-link').props())

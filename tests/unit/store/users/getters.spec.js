@@ -5,10 +5,14 @@ const state = {
   userFeed: [{ id: 1, title: "feed" }, { id: 1, title: "feed" }]
 }
 
-test('getter userInfo возвращает данные', () => {
-  expect(users.getters.userInfo(state)).toEqual(state.userInfo)
+describe('user/getter ok', () => {
+  test('getter userInfo ok', () => {
+    expect(users.getters.userInfo(state)).toEqual(state.userInfo)
+  })
+
+  test('getter userFeed ok', () => {
+    expect(users.getters.userFeed(state)).toEqual(state.userFeed)
+  })
 })
 
-test('getter userFeed возвращает данные', () => {
-  expect(users.getters.userFeed(state)).toEqual(state.userFeed)
-})
+

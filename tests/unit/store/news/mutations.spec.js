@@ -1,7 +1,7 @@
 import news from '@/store/news'
 
-describe('news/mutations', () => {
-  it("set news", () => {
+describe('news/mutations ok', () => {
+  test("mutations trendingFeed ok", () => {
     const post = { id: 1, title: "Post" }
     const state = {
       trendingFeed: {}
