@@ -1,9 +1,8 @@
 <template>
-  <v-card
+  <StyledNewsCard
+    :lightTheme="theme"
     v-if="item"
     class="mx-auto"
-    color="#010101"
-    dark
   >
     <v-card-text class="text-h5 font-weight-bold">
       <div>
@@ -47,16 +46,27 @@
         </div>
       </div>
     </div>
-  </v-card>
+  </StyledNewsCard>
 </template>
 
 <script>
+
+import {StyledNewsCard} from "@/styled-components/NewsCard"
+import store from "../store";
   export default {
     name: 'NewsCard',
+    components:{
+      StyledNewsCard
+    },
     props: {
       item: {
         type: Object,
         default: () => {}
+      }
+    },
+    computed: {
+      theme() {
+        return store.state.theme.theme
       }
     }
   }
@@ -71,7 +81,6 @@
   .user-link {
     text-decoration: none;
     .author-name {
-      color: white;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
