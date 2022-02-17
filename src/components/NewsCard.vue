@@ -1,5 +1,6 @@
 <template>
   <v-card
+    v-if="item"
     class="mx-auto"
     color="#010101"
     dark
@@ -10,7 +11,7 @@
           <source :src="item.videoUrl">
        </video>
       </div>
-      <div>
+      <div class="card-text">
         {{ item.text }}
       </div>
     </v-card-text>
@@ -25,24 +26,24 @@
             ></v-img>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="avatar-img">
+            <v-list-item-title class="author-name">
               {{ item.authorMeta.nickName }}
             </v-list-item-title>
           </v-list-item-content>
         </router-link>
       </div>
       <div>
-        <div class="stat-item">
+        <div class="stat-item likes">
           <v-icon class="mr-1">
             mdi-heart
           </v-icon>
-          <span class="subheading mr-2">{{ item.diggCount }}</span>
+          <span class="subheading likes-count mr-2">{{ item.diggCount }}</span>
         </div>
-        <div class="stat-item">
+        <div class="stat-item comments">
           <v-icon class="mr-1">
             mdi-comment
           </v-icon>
-          <span class="subheading">{{ item.commentCount }}</span>
+          <span class="subheading comments-count">{{ item.commentCount }}</span>
         </div>
       </div>
     </div>
@@ -69,7 +70,7 @@
   justify-content: space-between;
   .user-link {
     text-decoration: none;
-    .avatar-img {
+    .author-name {
       color: white;
       text-decoration: none;
       &:hover {
