@@ -1,0 +1,58 @@
+import { shallowMount  } from '@vue/test-utils'
+import UserInfo from '@/components/UserInfo.vue'
+
+const userItem = {
+  "user": {
+    "id": "127905465618821121",
+    "shortId": "0",
+    "uniqueId": "khaby.lame",
+    "nickname": "Khabane lame",
+    "avatarLarger": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/30107337091e90a33da10d6ce1815bb1~c5_1080x1080.jpeg?x-expires=1637071200&x-signature=O%2BItV0bneSAz0%2FHXzFuh%2F2AyzpA%3D",
+    "avatarMedium": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/30107337091e90a33da10d6ce1815bb1~c5_720x720.jpeg?x-expires=1637071200&x-signature=Wy1C4I3q%2FeBqqfWNZ0ubmdtjNrs%3D",
+    "avatarThumb": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/30107337091e90a33da10d6ce1815bb1~c5_100x100.jpeg?x-expires=1637071200&x-signature=LFGOs73tZmDO7EHpjnhNxpf1M5c%3D",
+    "signature": "Se vuoi ridere sei nel posto giusto😎 \nIf u wanna laugh u r in the right place😎",
+    "createTime": 1470866554,
+    "verified": true,
+    "secUid": "MS4wLjABAAAAwAg0rSzO65WQfz4RzQgGv2Xdv108BgPXhRrrmNVIHQZ9PO8-flwwRtEppYTS0OjA",
+    "ftc": false,
+    "relation": 0,
+    "openFavorite": false,
+    "bioLink": {
+      "link": "https://khabyshop.com",
+      "risk": 3
+    },
+    "commentSetting": 0,
+    "duetSetting": 0,
+    "stitchSetting": 0,
+    "privateAccount": false,
+    "secret": false,
+    "isADVirtual": false,
+    "roomId": ""
+  },
+  "stats": {
+    "followerCount": 120400000,
+    "followingCount": 63,
+    "heart": 1900000000,
+    "heartCount": 1900000000,
+    "videoCount": 970,
+    "diggCount": 0
+  },
+  "itemList": []
+}
+
+describe('components/UserInfo ok', () => {
+  const wrapper = shallowMount (UserInfo,{
+    propsData: {
+      userInfo: userItem,
+    }
+  })
+  test('UserInfo has nickname', () => {
+    expect(wrapper.find('.user-nickname').text()).toEqual(userItem.user.nickname)
+  })
+  test('UserInfo has link', () => {
+    expect(wrapper.find('.user-link').text()).toEqual(userItem.user.bioLink.link)
+  })
+  test('UserInfo has text', () => {
+    expect(wrapper.find('.user-signature').text()).toEqual(userItem.user.signature)
+  })
+})

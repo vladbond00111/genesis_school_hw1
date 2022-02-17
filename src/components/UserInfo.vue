@@ -17,15 +17,15 @@
         ></v-img>
       </v-list-item-avatar>
       <v-list-item-content>
-        <div class="text-overline mb-4">
+        <div class="user-nickname text-overline mb-4">
           {{ userInfo.user.nickname }}
         </div>
         <v-list-item-title class="text-h5 mb-1">
-          <a href="userInfo.user.bioLink.link" v-if="userInfo.user.bioLink">
+          <a :href="userInfo.user.bioLink.link" v-if="userInfo.user.bioLink" class="user-link">
             {{ userInfo.user.bioLink.link }}
           </a>
         </v-list-item-title>
-        <v-list-item-subtitle>{{ userInfo.user.signature }}</v-list-item-subtitle>
+        <v-list-item-subtitle class="user-signature">{{ userInfo.user.signature }}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
   </v-card>
